@@ -1,2 +1,13 @@
-# AngularJS_lesson3_official_tutorial
-AngularJS Official Tutorial explained step by step
+# AngularJS Official Tutorial explained step by step
+
+## 1. 
+
+
+## 2. 
+
+
+
+## 3.  
+
+
+
