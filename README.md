@@ -49,7 +49,7 @@ npm install angular
 
 We create the folders and files project structure
 
-![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/9aa48697-7ae5-45d8-b02c-edf7e64dc975)
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/d3939a9c-cd21-4164-b3db-3fa832fd8dfb)
 
 We copy the following source code 
 
