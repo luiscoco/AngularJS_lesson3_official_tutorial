@@ -724,4 +724,7 @@ The ng-repeat directive dynamically filters the list of phones based on the quer
 
 Only phones whose properties match the query are displayed in the list
 
+This is the application architecture
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/0f163c86-ed04-47d4-8969-3cb253f88cfe)
 
