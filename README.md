@@ -52,6 +52,19 @@ We copy the following source code
 </html>
 ```
 
+This is the code architecture explanation
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/6df09bff-0ae6-4d3f-9bd9-35902a827299)
+
+To run the applicaton we right click on the **index.html** file and select the menu option **Open with Live Server**
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/b5b3e471-8f6d-4dd8-962f-37e6b944ce9c)
+
+This is the output we see
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/759b094b-f183-4cdd-9ab2-90dcfc03a304)
+
+
 ## 2. 
 
 
