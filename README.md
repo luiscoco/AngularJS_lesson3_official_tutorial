@@ -145,7 +145,7 @@ The list of three phones is now generated **dynamically** from data
 
 This is the project folders and files structure
 
-![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/aa6469a7-ef9c-42f5-91d1-ac83ba882734)
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/ded2d523-6137-40a5-9640-40daab84d4ef)
 
 This is the application source code
 
