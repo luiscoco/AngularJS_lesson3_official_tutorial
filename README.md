@@ -377,32 +377,94 @@ This is the applicaiton **source code**
 
 **index.html**
 ```html
+<!DOCTYPE html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="app.css" />
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="phone-list.component.js"></script>
+</head>
+<body>
 
+  <!-- Use a custom component to render a list of phones -->
+  <phone-list></phone-list>
+
+</body>
+</html>
 ```
 
 **app.js**
 ```javascript
+'use strict';
 
+angular.module('phonecatApp', []);
 ```
 
 **app.css**
 ```css
-
+body {
+    padding-top: 20px;
+  }
 ```
 
 **phone-list.component.js**
 ```javascript
+'use strict';
 
+// Register `phoneList` component, along with its associated controller and template
+angular.
+  module('phonecatApp').
+  component('phoneList', {
+    template:
+        '<ul>' +
+          '<li ng-repeat="phone in $ctrl.phones">' +
+            '<span>{{phone.name}}</span>' +
+            '<p>{{phone.snippet}}</p>' +
+          '</li>' +
+        '</ul>',
+    controller: function PhoneListController() {
+      this.phones = [
+        {
+          name: 'Nexus S',
+          snippet: 'Fast just got faster with Nexus S.'
+        }, {
+          name: 'Motorola XOOM™ with Wi-Fi',
+          snippet: 'The Next, Next Generation tablet.'
+        }, {
+          name: 'MOTOROLA XOOM™',
+          snippet: 'The Next, Next Generation tablet.'
+        }
+      ];
+    }
+  });
 ```
 
 **phone-list.component.spec.js**
 ```javascript
+'use strict';
 
+describe('phoneList', function() {
+
+  // Load the module that contains the `phoneList` component before each test
+  beforeEach(module('phonecatApp'));
+
+  // Test the controller
+  describe('PhoneListController', function() {
+
+    it('should create a `phones` model with 3 phones', inject(function($componentController) {
+      var ctrl = $componentController('phoneList');
+
+      expect(ctrl.phones.length).toBe(3);
+    }));
+
+  });
+
+});
 ```
-
-
-
-
 
 This is the application arthitecture
 
