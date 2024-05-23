@@ -23,6 +23,12 @@ Then we initialize/create the package.json file ruuning this command
 npm init -y
 ```
 
+We install angular dependencies with this command
+
+```
+npm install angular
+```
+
 
 
 ## 2. 
