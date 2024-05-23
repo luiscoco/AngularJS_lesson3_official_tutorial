@@ -344,3 +344,12 @@ Modify the karma.conf.js file to **include your application and test files**
       'app/*.spec.js'
     ],
 ```
+
+To **Run the Tests** execute this command: 
+
+```
+karma start karma.conf.js
+```
+
+This is the output we get
+
