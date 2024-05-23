@@ -862,6 +862,19 @@ protractor protractor.conf.js
 
 ## 8. Step 6: Two-way Data Binding
 
+We will add a feature to let our users control the **order of the items** in the phone list
+
+The **dynamic ordering** is implemented by creating a new model property, wiring it together with the repeater, and letting the data binding magic do the rest of the work
+
+The application now displays a **drop-down menu** that allows users to control the **order** in which the phones are listed
+
+This is the application **source code**
+
+
+
+This is now the application architecture
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/2e66136b-cd51-416f-99df-5c1d365f9d63)
 
 ## 9. Step 7: XHR & Dependency Injection
 
