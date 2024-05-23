@@ -746,7 +746,7 @@ npm install -g protractor
 
 2. Download your Chromedriver
 
-Navigate to this web page and download the latest chromedriver version 
+Navigate to this web page and download the latest **chromedriver** version 
 
 https://googlechromelabs.github.io/chrome-for-testing/#stable
 
@@ -766,7 +766,13 @@ Set the **PATH** environmental variable
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/32f73cb6-f965-4e54-8292-8fb3f1ec192f)
 
-Run the Task Manager and **delete chromedriver.exe*** file from the path:
+Run the **Task Manager** and **delete chromedriver.exe** proccess 
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/159e9bd2-1919-4ab6-972b-103b5bcb839d)
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/b907d436-e84f-4849-9646-59543f220c6d)
+
+Also delete the **chromedriver.exe** file from the path:
 
 .../AppData/Roaming/npm/node_modules/protractor/node_modules/webdriver_manager/selenium/chromedriver_114.0.57
 
