@@ -728,6 +728,14 @@ This is the application architecture
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/0f163c86-ed04-47d4-8969-3cb253f88cfe)
 
+## How to run the application
+
+This is the application output
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/34227f18-5722-4c84-a690-9781adfb89a9)
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/75e155f8-3c31-4878-90ed-75f09463c129)
+
 ## How to run the end-to-end (e2e) test for your AngularJS application using Protractor
 
 1. Install **Protractor**: Make sure you have Protractor installed. If not, you can install it globally using npm
