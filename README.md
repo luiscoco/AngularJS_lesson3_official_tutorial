@@ -230,5 +230,53 @@ This is the application architecture
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/db76e45c-12bd-48bd-9d34-853695f2d550)
 
+**How to run the application**
+
+We first have to define the project dependencies in the **package.json** file
+
+```json
+{
+  "name": "angularjs_official_sample_step4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "3.3.x"
+  },
+  "devDependencies": {
+    "angular": "^1.8.3",
+    "angular-mocks": "^1.8.3",
+    "jasmine-core": "^5.1.2",
+    "karma": "^6.4.3",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-jasmine": "^5.1.0",
+    "karma-ng-html2js-preprocessor": "^1.0.0"
+  }
+}
+```
+
+To install the above dependencies we execute the command
+
+```
+npm i
+```
+
+or 
+
+```
+npm install
+```
+
+The file **package-lock.json** file will be created
+
+Also the libraries will be installed in **node_modules**
+
+This 
 
 
