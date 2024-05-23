@@ -470,3 +470,16 @@ This is the application arthitecture
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/a511e468-49d5-4c1a-b680-578466998534)
 
+We **run the application** and this is the output
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/bff97c1a-6028-478f-a8ee-bc0323cce2ba)
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/ddf8f8d9-3251-4469-a100-27b7a72acffd)
+
+We **run the Tests** and this is the output
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/f9faa599-2bd9-42ef-bf88-f3374cc86787)
+
+## 6. Step 4: Directory and File Organization
+
+
