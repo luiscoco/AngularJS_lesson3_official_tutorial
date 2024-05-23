@@ -143,10 +143,6 @@ With that in mind, let's use a little AngularJS and JavaScript to add **models**
 
 The list of three phones is now generated **dynamically** from data
 
-This is the project folders and files structure
-
-![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/ded2d523-6137-40a5-9640-40daab84d4ef)
-
 This is the application source code
 
 **index.html**
@@ -277,6 +273,11 @@ The file **package-lock.json** file will be created
 
 Also the libraries will be installed in **node_modules**
 
-This 
+This is the project **folders and files structure**
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/c10ef763-1122-46c6-97ee-1d9aa8bf9f0f)
+
+
+
 
 
