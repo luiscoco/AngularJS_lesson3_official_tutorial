@@ -76,7 +76,7 @@ This is the code architecture explanation
 
 To run the applicaton we right click on the **index.html** file and select the menu option **Open with Live Server**
 
-![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/b5b3e471-8f6d-4dd8-962f-37e6b944ce9c)
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/a7837f0e-f0ed-4fa4-ab1f-543b225dbce1)
 
 This is the output we see
 
