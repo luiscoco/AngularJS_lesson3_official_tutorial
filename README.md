@@ -676,7 +676,7 @@ This is the application source code:
 </div>
 ```
 
-**Source code explanation**
+### Source code explanation
 
 **Container Fluid** (```<div class="container-fluid">```):
 
@@ -728,3 +728,40 @@ This is the application architecture
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/0f163c86-ed04-47d4-8969-3cb253f88cfe)
 
+## How to run the end-to-end (e2e) test for your AngularJS application using Protractor
+
+Install Protractor: Make sure you have Protractor installed. If not, you can install it globally using npm.
+
+bash
+Copy code
+npm install -g protractor
+Update WebDriver: Protractor uses WebDriver to interact with your web application. Make sure you update WebDriver to get the latest version.
+
+bash
+Copy code
+webdriver-manager update
+Start WebDriver: Before running your tests, you need to start the WebDriver server.
+
+bash
+Copy code
+webdriver-manager start
+Protractor Configuration File: Ensure you have a Protractor configuration file (protractor.conf.js). This file tells Protractor where to find your tests and how to run them. Here’s an example configuration file:
+
+javascript
+Copy code
+exports.config = {
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  specs: ['e2e-tests/*.js'], // Adjust the path to your test files as needed
+  capabilities: {
+    'browserName': 'chrome'
+  },
+  framework: 'jasmine',
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 30000
+  }
+};
+Run the Test: In VSCode, you can run your e2e test using the integrated terminal. Open the terminal and execute the following command:
+
+bash
+Copy code
+protractor protractor.conf.js
