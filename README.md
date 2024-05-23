@@ -47,6 +47,22 @@ We install angular dependencies with this command
 npm install angular
 ```
 
+We have an optinal way for installing the dependencies: **bootstrap.css** and **angular.js** files
+
+We can create manually the folders structure (with **mkdir**) and then download the libraries with **curl** command
+
+```
+mkdir -p lib/bootstrap/dist/css
+cd lib/bootstrap/dist/css
+curl -O https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.css
+```
+
+```
+mkdir -p lib/angular
+cd lib/angular
+curl -O https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js
+```
+
 We create the folders and files project structure
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/d3939a9c-cd21-4164-b3db-3fa832fd8dfb)
