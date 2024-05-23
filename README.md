@@ -854,4 +854,10 @@ protractor protractor.conf.js
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/71e925c4-4da4-4e2f-9f02-0eb21377ea73)
 
+## 8. Step 6: Two-way Data Binding
 
+
+## 9. Step 7: XHR & Dependency Injection
+
+
+## 10. Step 8: Templating Links & Images
