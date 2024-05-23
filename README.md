@@ -1024,9 +1024,3 @@ How to **run the application**
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/936c8a16-2031-4cf4-b3d6-b5c36228de33)
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/40328961-0724-4970-8d5b-6733633c90e9)
-
-
-## 9. Step 7: XHR & Dependency Injection
-
-
-## 10. Step 8: Templating Links & Images
