@@ -614,8 +614,9 @@ angular.module('phoneList', []);
 
 How to **run the application**
 
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/edde3521-9c92-49bb-9e5b-85c07c8d8f15)
 
-
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/3bf9a8a0-6889-482b-b40c-fb356f9bf9c5)
 
 How to **run the Tests**
 
