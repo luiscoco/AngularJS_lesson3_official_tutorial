@@ -226,7 +226,7 @@ This is the application architecture
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/db76e45c-12bd-48bd-9d34-853695f2d550)
 
-**How to run the application**
+### How to run the application
 
 We first have to define the project dependencies in the **package.json** file
 
@@ -277,7 +277,9 @@ This is the project **folders and files structure**
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/c10ef763-1122-46c6-97ee-1d9aa8bf9f0f)
 
+To run the application we right click on the **index.html** file and selecting the **Open with Live Server** menu option
 
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/45071574-b9ec-4485-8131-fc0c7e6c8497)
 
 
 
