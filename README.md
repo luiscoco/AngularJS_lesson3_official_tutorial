@@ -639,3 +639,89 @@ Modify the **karma.conf.js** file
 This is the test output
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/37b1d16f-253b-440b-b635-107bf234d7a9)
+
+## 7. Step 5: Filtering repeaters
+
+We will add full-text search. The phone list on the page changes depending on what a user types into the search box
+
+We will also write an end-to-end (E2E) test
+
+the data that a user types into the input box (bound to ```$ctrl.query```) is immediately available as a filter input in the list repeater (```phone in $ctrl.phones | filter:$ctrl.query```)
+
+This is the application source code:
+
+**phone-list.template.html**
+
+```html
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="$ctrl.query" />
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query">
+          <span>{{phone.name}}</span>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+```
+
+**Source code explanation**
+
+**Container Fluid** (```<div class="container-fluid">```):
+
+This **div** is a **Bootstrap** class that creates a **full-width container**
+
+It ensures that the content inside it is **responsive** and spans the **full width** of the viewport
+
+**Row** (```<div class="row">```):
+
+This **div** creates a **horizontal group of columns** using Bootstrap's grid system
+
+**Sidebar Column** (```<div class="col-md-2">```):
+
+This **div** defines a **column** that takes up 2 out of 12 parts of the row (using Bootstrap's grid system for medium and larger devices)
+
+**Search Input** (```<input ng-model="$ctrl.query" />```):
+
+This is an input field bound to the AngularJS model $ctrl.query. The ng-model directive binds the input value to the controller's query property, enabling two-way data binding.
+
+**Main Content Column** (```<div class="col-md-10">```):
+
+This div defines a column that takes up the remaining 10 out of 12 parts of the row
+
+**Phone List** (```<ul class="phones">```):
+
+This unordered list will display a list of phones
+
+**Repeating List Items** (```<li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query">```):
+
+The **ng-repeat** directive is used to iterate over each phone in the $ctrl.phones array
+
+The **filter:$ctrl.query** part filters the phones based on the query input. It only displays phones that match the query
+
+Phone Name and Snippet (```<span>{{phone.name}}</span>, <p>{{phone.snippet}}</p>```):
+
+{{phone.name}} and {{phone.snippet}} are AngularJS expressions that display the phone's name and snippet, respectively
+
+**Functionality**
+
+The search input allows the user to type a query
+
+As the user types, the **ng-model** directive updates the **$ctrl.query** property
+
+The ng-repeat directive dynamically filters the list of phones based on the query
+
+Only phones whose properties match the query are displayed in the list
+
+
