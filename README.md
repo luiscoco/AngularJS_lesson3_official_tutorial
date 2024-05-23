@@ -776,11 +776,16 @@ Run the Task Manager and **delete chromedriver.exe*** file from the path:
 webdriver-manager update
 ```
 
-4. **Start WebDriver**: Before running your tests, you need to start the WebDriver server
+4. **Start WebDriver**: Before running your tests, you need to start the **WebDriver** server
 
 ```
 webdriver-manager start
 ```
+
+Open one Terminal Window in VSCode and run the above command
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/aa0e469b-c661-4140-bfa3-3a961ab3230d)
+
 
 5. Protractor Configuration File: Ensure you have a Protractor configuration file (**protractor.conf.js**)
 
@@ -841,9 +846,12 @@ describe('PhoneCat Application', function() {
 
 6. **Run the Test**: In VSCode, you can run your e2e test using the integrated terminal
 
-Open the terminal and execute the following command:
+Open a second Terminal Window in VSCode and run this command
 
 ```
 protractor protractor.conf.js
 ```
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/71e925c4-4da4-4e2f-9f02-0eb21377ea73)
+
 
