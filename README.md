@@ -133,7 +133,102 @@ Now we can run the application and see the output
 
 ## 4. Step 2: AngularJS Template
 
+Now, it's time to make the **web page dynamic** — with **AngularJS**
 
+We will also add a test that verifies the code for the controller we are going to add
+
+For AngularJS applications, we encourage the use of the **Model-View-Controller (MVC)** design pattern to decouple the code and separate concerns
+
+With that in mind, let's use a little AngularJS and JavaScript to add **models**, **views**, and **controllers** to our app
+
+The list of three phones is now generated **dynamically** from data
+
+This is the project folders and files structure
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/aa6469a7-ef9c-42f5-91d1-ac83ba882734)
+
+This is the application source code
+
+**index.html**
+
+```
+<html lang="en" ng-app="phonecatApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="PhoneListController">
+
+    <ul>
+      <li ng-repeat="phone in phones">
+        <span>{{phone.name}}</span>
+        <p>{{phone.snippet}}</p>
+      </li>
+    </ul>
+
+  </body>
+</html>
+```
+
+**app.css**
+
+```
+body {
+    padding-top: 20px;
+  }
+```
+
+**app.js**
+
+```
+'use strict';
+
+// Define the `phonecatApp` module
+var phonecatApp = angular.module('phonecatApp', []);
+
+// Define the `PhoneListController` controller on the `phonecatApp` module
+phonecatApp.controller('PhoneListController', function PhoneListController($scope) {
+  $scope.phones = [
+    {
+      name: 'Nexus S',
+      snippet: 'Fast just got faster with Nexus S.'
+    }, {
+      name: 'Motorola XOOM™ with Wi-Fi',
+      snippet: 'The Next, Next Generation tablet.'
+    }, {
+      name: 'MOTOROLA XOOM™',
+      snippet: 'The Next, Next Generation tablet.'
+    }
+  ];
+});
+```
+
+**app.spec.js**
+
+```
+'use strict';
+
+describe('PhoneListController', function() {
+
+  beforeEach(module('phonecatApp'));
+
+  it('should create a `phones` model with 3 phones', inject(function($controller) {
+    var scope = {};
+    var ctrl = $controller('PhoneListController', {$scope: scope});
+
+    expect(scope.phones.length).toBe(3);
+  }));
+
+});
+```
+
+This is the application architecture
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/db76e45c-12bd-48bd-9d34-853695f2d550)
 
 
 
