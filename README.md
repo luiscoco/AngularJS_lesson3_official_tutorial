@@ -744,19 +744,45 @@ This is the application output
 npm install -g protractor
 ```
 
-**Update WebDriver**: Protractor uses WebDriver to interact with your web application. Make sure you update WebDriver to get the latest version
+2. Download your Chromedriver
+
+Navigate to this web page and download the latest chromedriver version 
+
+https://googlechromelabs.github.io/chrome-for-testing/#stable
+
+We select the **stable** version link
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/18479664-3b80-444b-b1a1-6211129057cc)
+
+Then we download the windows 64 version
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/3707c09d-8084-43d3-8949-9f94e4747141)
+
+**Unzip** the file and copy in a folder
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/7bc8d541-a4e6-41e4-9d62-5733b40d8fc2)
+
+Set the **PATH** environmental variable
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/32f73cb6-f965-4e54-8292-8fb3f1ec192f)
+
+Run the Task Manager and **delete chromedriver.exe*** file from the path:
+
+.../AppData/Roaming/npm/node_modules/protractor/node_modules/webdriver_manager/selenium/chromedriver_114.0.57
+
+3. **Update WebDriver**: Protractor uses WebDriver to interact with your web application. Make sure you update WebDriver to get the latest version
 
 ```
 webdriver-manager update
 ```
 
-**Start WebDriver**: Before running your tests, you need to start the WebDriver server
+4. **Start WebDriver**: Before running your tests, you need to start the WebDriver server
 
 ```
 webdriver-manager start
 ```
 
-Protractor Configuration File: Ensure you have a Protractor configuration file (**protractor.conf.js**)
+5. Protractor Configuration File: Ensure you have a Protractor configuration file (**protractor.conf.js**)
 
 This file tells **Protractor** where to find your tests and how to run them. Here’s an example configuration file:
 
@@ -764,19 +790,23 @@ This file tells **Protractor** where to find your tests and how to run them. Her
 
 ```javascript
 exports.config = {
-  seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['e2e-tests/*.js'], // Adjust the path to your test files as needed
-  capabilities: {
-    'browserName': 'chrome'
-  },
-  framework: 'jasmine',
-  jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
-  }
-};
+    seleniumAddress: 'http://localhost:4444/wd/hub',
+    specs: ['e2e-tests/*.js'], // Adjust the path to your test files as needed
+    capabilities: {
+      'browserName': 'chrome'
+    },
+    framework: 'jasmine',
+    jasmineNodeOpts: {
+      defaultTimeoutInterval: 30000
+    },
+    onPrepare: function() {
+      browser.ignoreSynchronization = true;  // Disable synchronization globally
+    },
+    chromeDriver: 'C:/chromedriver/chromedriver.exe'  // Specify the path to the new ChromeDriver
+  };
 ```
 
-**Run the Test**: In VSCode, you can run your e2e test using the integrated terminal
+6. **Run the Test**: In VSCode, you can run your e2e test using the integrated terminal
 
 Open the terminal and execute the following command:
 
