@@ -369,3 +369,42 @@ AngularJS will create a so called **isolate scope** for each instance of our com
 
 To create a component, we use the **.component()** method of an **AngularJS module**
 
+This is the project folders and files structure
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/226a882b-6fb9-4838-9a23-e519c2f3fe4f)
+
+This is the applicaiton **source code**
+
+**index.html**
+```html
+
+```
+
+**app.js**
+```javascript
+
+```
+
+**app.css**
+```css
+
+```
+
+**phone-list.component.js**
+```javascript
+
+```
+
+**phone-list.component.spec.js**
+```javascript
+
+```
+
+
+
+
+
+This is the application arthitecture
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/a511e468-49d5-4c1a-b680-578466998534)
+
