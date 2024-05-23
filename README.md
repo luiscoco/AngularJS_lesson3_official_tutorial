@@ -361,3 +361,11 @@ This is the output we get
 
 ## 5. Step 3: Components
 
+In the previous step, we saw how a controller and a template worked together to convert a static HTML page into a dynamic view
+
+Since this combination (**template + controller**) is such a common and **recurring pattern**, AngularJS provides an easy and concise way to combine them together into reusable and isolated entities, known as **components**
+
+AngularJS will create a so called **isolate scope** for each instance of our component
+
+To create a component, we use the **.component()** method of an **AngularJS module**
+
