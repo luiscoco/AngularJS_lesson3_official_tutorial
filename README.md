@@ -83,7 +83,39 @@ This is the output we see
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/759b094b-f183-4cdd-9ab2-90dcfc03a304)
 
 
-## 2. 
+## 3.  Step 1: Static Template 
+
+We will create a purely **static HTML page** and then examine how we can turn this HTML code into a **template** that AngularJS will use to **dynamically display** the same result with any set of data
+
+```html
+<html lang="en" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="lib/angular/angular.js"></script>
+  </head>
+  <body>
+
+    <ul>
+      <li>
+        <span>Nexus S</span>
+        <p>
+          Fast just got faster with Nexus S.
+        </p>
+      </li>
+      <li>
+        <span>Motorola XOOM™ with Wi-Fi</span>
+        <p>
+          The Next, Next Generation tablet.
+        </p>
+      </li>
+    </ul>
+
+  </body>
+</html>
+```
 
 
 
