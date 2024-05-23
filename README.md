@@ -151,7 +151,7 @@ This is the application source code
 
 **index.html**
 
-```
+```html
 <html lang="en" ng-app="phonecatApp">
   <head>
     <meta charset="utf-8">
@@ -176,7 +176,7 @@ This is the application source code
 
 **app.css**
 
-```
+```css
 body {
     padding-top: 20px;
   }
@@ -184,7 +184,7 @@ body {
 
 **app.js**
 
-```
+```javascript
 'use strict';
 
 // Define the `phonecatApp` module
@@ -209,7 +209,7 @@ phonecatApp.controller('PhoneListController', function PhoneListController($scop
 
 **app.spec.js**
 
-```
+```javascript
 'use strict';
 
 describe('PhoneListController', function() {
