@@ -117,9 +117,23 @@ We will create a purely **static HTML page** and then examine how we can turn th
 </html>
 ```
 
+```css
+body {
+    padding-top: 20px;
+  }
+```
+
+This is the project folders and files structure
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/7f3c2fb7-2fc1-4386-8200-50116cfd1bfc)
+
+Now we can run the application and see the output
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/b5d2cb53-5965-4156-9438-a6d5ce5d2206)
+
+## 4. Step 2: AngularJS Template
 
 
-## 3.  
 
 
 
