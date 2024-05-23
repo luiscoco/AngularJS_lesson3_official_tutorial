@@ -806,6 +806,39 @@ exports.config = {
   };
 ```
 
+**e2e-tests/scenarios.js**
+
+```javascript
+'use strict';
+
+describe('PhoneCat Application', function() {
+
+    describe('phoneList', function() {
+  
+      beforeEach(function() {
+        browser.ignoreSynchronization = true;  // Disable Angular synchronization
+        browser.get('http://127.0.0.1:5500/app/index.html');
+      });
+  
+      it('should filter the phone list as a user types into the search box', function() {
+        var phoneList = element.all(by.repeater('phone in $ctrl.phones'));
+        var query = element(by.model('$ctrl.query'));
+  
+        expect(phoneList.count()).toBe(3);
+  
+        query.sendKeys('nexus');
+        expect(phoneList.count()).toBe(1);
+  
+        query.clear();
+        query.sendKeys('motorola');
+        expect(phoneList.count()).toBe(2);
+      });
+  
+    });
+
+});
+```
+
 6. **Run the Test**: In VSCode, you can run your e2e test using the integrated terminal
 
 Open the terminal and execute the following command:
