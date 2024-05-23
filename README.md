@@ -870,9 +870,150 @@ The application now displays a **drop-down menu** that allows users to control t
 
 This is the application **source code**
 
+**app/phone-list/phone-list.component.js**
 
+```javascript
+'use strict';
+// Register `phoneList` component, along with its associated controller and template
+angular.
+  module('phoneList').
+  component('phoneList', {
+    templateUrl: 'phone-list/phone-list.template.html',
+    controller: function PhoneListController() {
+      this.phones = [
+        {
+          name: 'Nexus S',
+          snippet: 'Fast just got faster with Nexus S.',
+          age: 1
+        }, {
+          name: 'Motorola XOOM™ with Wi-Fi',
+          snippet: 'The Next, Next Generation tablet.',
+          age: 2
+        }, {
+          name: 'MOTOROLA XOOM™',
+          snippet: 'The Next, Next Generation tablet.',
+          age: 3
+        }
+      ];
 
-This is now the application architecture
+      this.orderProp = 'age';
+    }
+  });
+```
+
+**app/phone-list/phone-list.component.spec.js**
+
+```javascript
+'use strict';
+
+describe('phoneList', function() {
+
+  // Load the module that contains the `phoneList` component before each test
+  beforeEach(module('phoneList'));
+
+  // Test the controller
+  describe('PhoneListController', function() {
+
+    it('should create a `phones` model with 3 phones', inject(function($componentController) {
+      var ctrl = $componentController('phoneList');
+
+      expect(ctrl.phones.length).toBe(3);
+    }));
+
+  });
+
+});
+```
+
+**app/phone-list/phone-list.template.html**
+
+```javascript
+<div class="col-md-2">
+  <!--Sidebar content-->
+
+  <p>
+    Search:
+    <input ng-model="$ctrl.query" />
+  </p>
+
+  <p>
+    Sort by:
+    <select ng-model="$ctrl.orderProp">
+      <option value="name">Alphabetical</option>
+      <option value="age">Newest</option>
+    </select>
+  </p>
+
+</div>
+<div class="col-md-10">
+  <!--Body content-->
+
+  <ul class="phones">
+    <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+      <span>{{phone.name}}</span>
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+```
+
+**e2e-tests/scenarios.js**
+
+```javascript
+'use strict';
+// AngularJS E2E Testing Guide:
+// https://docs.angularjs.org/guide/e2e-testing
+describe('PhoneCat Application', function() {
+  describe('phoneList', function() {
+    beforeEach(function() {
+      browser.get('index.html');
+    });
+    it('should filter the phone list as a user types into the search box', function() {
+      var phoneList = element.all(by.repeater('phone in $ctrl.phones'));
+      var query = element(by.model('$ctrl.query'));
+      expect(phoneList.count()).toBe(3);
+      query.sendKeys('nexus');
+      expect(phoneList.count()).toBe(1);
+      query.clear();
+      query.sendKeys('motorola');
+      expect(phoneList.count()).toBe(2);
+    });
+
+    it('should be possible to control phone order via the drop-down menu', function() {
+      var queryField = element(by.model('$ctrl.query'));
+      var orderSelect = element(by.model('$ctrl.orderProp'));
+      var nameOption = orderSelect.element(by.css('option[value="name"]'));
+      var phoneNameColumn = element.all(by.repeater('phone in $ctrl.phones').column('phone.name'));
+
+      function getNames() {
+        return phoneNameColumn.map(function(elem) {
+          return elem.getText();
+        });
+      }
+
+      queryField.sendKeys('tablet');   // Let's narrow the dataset to make the assertions shorter
+
+      expect(getNames()).toEqual([
+        'Motorola XOOM\u2122 with Wi-Fi',
+        'MOTOROLA XOOM\u2122'
+      ]);
+
+      nameOption.click();
+
+      expect(getNames()).toEqual([
+        'MOTOROLA XOOM\u2122',
+        'Motorola XOOM\u2122 with Wi-Fi'
+      ]);
+    });
+
+  });
+
+});
+```
+
+This is the application architecture
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/2e66136b-cd51-416f-99df-5c1d365f9d63)
 
