@@ -730,25 +730,31 @@ This is the application architecture
 
 ## How to run the end-to-end (e2e) test for your AngularJS application using Protractor
 
-Install Protractor: Make sure you have Protractor installed. If not, you can install it globally using npm.
+1. Install **Protractor**: Make sure you have Protractor installed. If not, you can install it globally using npm
 
-bash
-Copy code
+```
 npm install -g protractor
-Update WebDriver: Protractor uses WebDriver to interact with your web application. Make sure you update WebDriver to get the latest version.
+```
 
-bash
-Copy code
+**Update WebDriver**: Protractor uses WebDriver to interact with your web application. Make sure you update WebDriver to get the latest version
+
+```
 webdriver-manager update
-Start WebDriver: Before running your tests, you need to start the WebDriver server.
+```
 
-bash
-Copy code
+**Start WebDriver**: Before running your tests, you need to start the WebDriver server
+
+```
 webdriver-manager start
-Protractor Configuration File: Ensure you have a Protractor configuration file (protractor.conf.js). This file tells Protractor where to find your tests and how to run them. Here’s an example configuration file:
+```
 
-javascript
-Copy code
+Protractor Configuration File: Ensure you have a Protractor configuration file (**protractor.conf.js**)
+
+This file tells **Protractor** where to find your tests and how to run them. Here’s an example configuration file:
+
+**protractor.conf.js**
+
+```javascript
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['e2e-tests/*.js'], // Adjust the path to your test files as needed
@@ -760,8 +766,13 @@ exports.config = {
     defaultTimeoutInterval: 30000
   }
 };
-Run the Test: In VSCode, you can run your e2e test using the integrated terminal. Open the terminal and execute the following command:
+```
 
-bash
-Copy code
+**Run the Test**: In VSCode, you can run your e2e test using the integrated terminal
+
+Open the terminal and execute the following command:
+
+```
 protractor protractor.conf.js
+```
+
