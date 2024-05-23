@@ -281,5 +281,10 @@ To run the application we right click on the **index.html** file and selecting t
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/45071574-b9ec-4485-8131-fc0c7e6c8497)
 
+This is the application output
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/3010e7f1-edd5-4600-bda1-26de8318ea02)
+
+### How to run the application tests
 
 
