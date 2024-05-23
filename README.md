@@ -620,4 +620,22 @@ How to **run the application**
 
 How to **run the Tests**
 
+Modify the **karma.conf.js** file
 
+```
+...
+    // list of files / patterns to load in the browser
+    files: [
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      'app/phone-list/phone-list.module.js',
+      'app/app.module.js',
+      'app/phone-list/*.js', // to include all JS files in the phone-list folder
+      'app/**/*spec.js'
+    ],
+...
+```
+
+This is the test output
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/37b1d16f-253b-440b-b635-107bf234d7a9)
