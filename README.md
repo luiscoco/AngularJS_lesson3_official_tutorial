@@ -35,7 +35,7 @@ We open VSCode with this command
 code .
 ```
 
-Then we initialize/create the package.json file ruuning this command
+Then we initialize/create the **package.json** file ruuning this command (OPTIONAL)
 
 ```
 npm init -y
