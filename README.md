@@ -358,3 +358,6 @@ This is the output we get
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/ef75f09d-0a6e-4f05-85f2-2476c570bdf4)
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/96b28446-6299-4da5-88ab-ba4f8393a9a7)
+
+## 5. Step 3: Components
+
