@@ -303,4 +303,44 @@ This is the application output
 
 ### How to run the application tests
 
+Install Karma CLI: Install **Karma's** command-line interface globally
 
+```
+npm install -g karma-cli
+```
+
+Then install the required **dependencies**:
+
+```
+npm install karma karma-jasmine jasmine-core karma-chrome-launcher karma-ng-html2js-preprocessor --save-dev
+```
+
+Create a **Karma Configuration File**:
+
+```
+karma init karma.conf.js
+```
+
+During the setup, answer the prompts as follows:
+
+Testing framework: Jasmine
+
+Use Require.js: No
+
+Capture browsers: Chrome (you can add more browsers later)
+
+Test result reporter: progress (or choose as per your preference)
+
+Other questions: default options should be fine
+
+Modify the karma.conf.js file to **include your application and test files**
+
+```
+   // list of files / patterns to load in the browser
+    files: [
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      'app/*.js',
+      'app/*.spec.js'
+    ],
+```
