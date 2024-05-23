@@ -1,4 +1,4 @@
-# AngularJS Official Tutorial explained step by step
+# AngularJS Official Tutorial (Part 1) explained step by step
 
 ## 1. Prerequisites
 
