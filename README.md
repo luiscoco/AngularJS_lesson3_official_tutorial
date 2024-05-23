@@ -482,4 +482,11 @@ We **run the Tests** and this is the output
 
 ## 6. Step 4: Directory and File Organization
 
+We are going to refactor our codebase and move files and code around, in order to make our application more easily expandable and maintainable
+
+- Put each entity in its own file
+
+- Organize our code by feature area, instead of by function
+
+- Split our code into modules that other modules can depend on
 
