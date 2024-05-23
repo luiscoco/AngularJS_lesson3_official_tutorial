@@ -1017,6 +1017,8 @@ This is the application architecture
 
 ![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/2e66136b-cd51-416f-99df-5c1d365f9d63)
 
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/936c8a16-2031-4cf4-b3d6-b5c36228de33)
+
 ## 9. Step 7: XHR & Dependency Injection
 
 
