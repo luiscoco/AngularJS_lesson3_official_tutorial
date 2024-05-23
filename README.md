@@ -2,6 +2,24 @@
 
 ## 1. Prerequisites
 
+The latest version of AngularJS is 1.8.3
+
+If you are using Angular Framework higher versions you should first uninstall it from your computer
+
+```
+npm uninstall -g @angular/cli
+```
+
+![image](https://github.com/luiscoco/AngularJS_brief_summary/assets/32194879/b5706ba3-81c3-4721-a823-efa8abf93680)
+
+Now we install the AngularJS in our laptop. Run this command
+
+```
+npm install -g angular@1.8.2
+```
+
+![image](https://github.com/luiscoco/AngularJS_brief_summary/assets/32194879/617ec53f-ce30-4b18-8c82-4cee87afc305)
+
 ## 2. Step 0: Bootstraping
 
 Initialize the project directory
