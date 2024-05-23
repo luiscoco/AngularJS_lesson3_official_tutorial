@@ -490,3 +490,133 @@ We are going to refactor our codebase and move files and code around, in order t
 
 - Split our code into modules that other modules can depend on
 
+This is the project folders and files structure
+
+![image](https://github.com/luiscoco/AngularJS_lesson3_official_tutorial/assets/32194879/736f33be-2750-4204-b9f6-fc62ca8ba71f)
+
+This is the application source code:
+
+**app/index.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="app.css" />
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="app.module.js"></script>
+  <script src="phone-list/phone-list.module.js"></script>
+  <script src="phone-list/phone-list.component.js"></script>
+</head>
+<body>
+
+  <!-- Use a custom component to render a list of phones -->
+  <phone-list></phone-list>
+
+</body>
+</html>
+```
+
+**app/app.module.js**
+
+```javascript
+'use strict';
+
+// Define the `phonecatApp` module
+angular.module('phonecatApp', [
+  // ...which depends on the `phoneList` module
+  'phoneList'
+]);
+```
+
+**app/app.css**
+
+```css
+body {
+    padding-top: 20px;
+  }
+```
+
+**app/phone-list/phone-list.component.js**
+
+```javascript
+'use strict';
+
+// Register `phoneList` component, along with its associated controller and template
+angular.
+  module('phoneList').
+  component('phoneList', {
+    templateUrl: 'phone-list/phone-list.template.html',
+    controller: function PhoneListController() {
+      this.phones = [
+        {
+          name: 'Nexus S',
+          snippet: 'Fast just got faster with Nexus S.'
+        }, {
+          name: 'Motorola XOOM™ with Wi-Fi',
+          snippet: 'The Next, Next Generation tablet.'
+        }, {
+          name: 'MOTOROLA XOOM™',
+          snippet: 'The Next, Next Generation tablet.'
+        }
+      ];
+    }
+  });
+```
+
+**app/phone-list/phone-list.component.spec.js**
+
+```javascript
+'use strict';
+
+describe('phoneList', function() {
+
+  // Load the module that contains the `phoneList` component before each test
+  beforeEach(module('phoneList'));
+
+  // Test the controller
+  describe('PhoneListController', function() {
+
+    it('should create a `phones` model with 3 phones', inject(function($componentController) {
+      var ctrl = $componentController('phoneList');
+
+      expect(ctrl.phones.length).toBe(3);
+    }));
+
+  });
+
+});
+```
+
+**app/phone-list/phone-list.module.js**
+
+```javascript
+'use strict';
+
+// Define the `phoneList` module
+angular.module('phoneList', []);
+```
+
+
+**app/phone-list/phone-list.template.js**
+
+```javascript
+<ul>
+    <li ng-repeat="phone in $ctrl.phones">
+      <span>{{phone.name}}</span>
+      <p>{{phone.snippet}}</p>
+    </li>
+</ul>
+```
+
+How to **run the application**
+
+
+
+
+How to **run the Tests**
+
+
